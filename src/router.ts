@@ -3,7 +3,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 const routes: Array<RouteRecordRaw> = [
   // Coin
   {
-    path: "/coin/:id",
+    path: "/coin",
     name: "Coin",
     component: () => import("./views/Coin.vue"),
   },

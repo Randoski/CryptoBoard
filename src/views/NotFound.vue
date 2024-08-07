@@ -1,17 +1,18 @@
 <template>
-    <div class="container">
+    <div class="">
         <div class="page-settings">
-            <div class="row error-container">
-                <div class="center-content">
+            <div class="error-container">
+                <div>
                     <!-- Animation -->
-                    <i class="fas fa-exclamation-triangle fa-5x animated-icon icon"></i>
+                    <i class="fas fa-exclamation-triangle fa-5x animated-icon icon text-accent"></i>
                     <!-- 404 Message -->
-                    <div>
-                        <h2>Ooops...</h2>
+                    <div class="flex flex-col justify-center items-center text-pry">
+                        <h2 class=" font-bold text-[40px]">Ooops...</h2>
                         <p>The page you are looking for doesn't exist or has been moved</p>
+                        
                         <!-- CTA -->
-                        <div class="cta-container">
-                            <router-link to="/" class="cta">Take Me Home</router-link>
+                            <div class="mt-10">
+                            <router-link to="/" class="bg-transparent text-pry text-[14px] border border-border font-semibold px-4 py-3">Take Me Home</router-link>
                         </div>
                     </div>
                 </div>
@@ -21,48 +22,12 @@
 </template>
 
 <style scoped>
+
 .error-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100.2vh;
-}
-
-.center-content {
-    text-align: center;
-}
-
-.icon {
-    color: #0e8900;
-}
-
-h2 {
-    font-size: 40px;
-    font-weight: 700;
-    color: #0e8900;
-}
-
-p {
-    font-weight: 700;
-    color: rgb(69, 66, 66);
-    margin-top: 16px;
-}
-
-.cta-container {
-    margin-top: 32px;
-}
-
-.cta {
-    text-decoration: none;
-    padding: 12px 24px;
-    color: white;
-    background-color: #0e8900;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-.cta:hover {
-    background-color: rgba(14, 137, 0, 0.9);
+    height: 70vh;
 }
 
 .animated-icon {
