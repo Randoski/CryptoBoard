@@ -1,30 +1,56 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="">
+    <Navbar />
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <router-view></router-view>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script>
+import Navbar from "./components/Navbar.vue";
+
+export default {
+  components: {
+    Navbar,
+  },
+};
+</script>
+
+<style>
+body {
+  /* font-family: "Comic Neue", cursive; */
+  font-family: "Montserrat Alternates", sans-serif !important;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+h1 {
+  font-size: 28px !important;
+  font-weight: bold !important;
+  color: rgb(69, 66, 66) !important;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+@media (min-width: 850x) {
+  /* .cont {
+    margin: 0 35px;
+  } */
+  .nav-links {
+    margin-left: 35px;
+  }
 }
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: 18px !important;
+    font-weight: bold !important;
+  }
+
+  p {
+    font-size: 14px !important;
+  }
+}
+
+/* @media (min-width: 590px) and (max-width: 1000px) {
+  body {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+} */
 </style>
