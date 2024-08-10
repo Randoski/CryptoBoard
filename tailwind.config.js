@@ -8,16 +8,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#001b44',
-        pry: '#E5E7EB',
-        sec: '#9CA3AF',
-        accent: '#3B82F6',
-        border: '#334155',
-        // Background Color: 
-        // Primary Text Color — for readability against the dark background
-        // Accent Color  — for highlights and call-to-action elements
-        // Secondary Text Color — for less prominent text or secondary information
-        // Border Color — for borders or dividers to provide subtle separation without harsh contrast
+        brand: '#0e8900',
+        pry: '#4A4A4A',
+        sec: '#ffffff',
+        accent: '#b3d1ff',
+        border: '#E5E7EB',
+
+        // background: '#001b44',
+        // pry: '#E5E7EB',
+        // sec: '#9CA3AF',
+        // accent: '#b3d1ff',
+        // border: '#334155',
       },
     },
   },

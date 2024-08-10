@@ -143,7 +143,7 @@ const routes: Array<RouteRecordRaw> = [
 
   // Read News (Article page)
   {
-    path: "/read:id",
+    path: "/read",
     name: "ReadNews",
     component: () => import("./views/ReadNews.vue"),
     props: true,
