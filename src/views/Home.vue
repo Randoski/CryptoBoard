@@ -1,91 +1,167 @@
 <template>
     <div class="mx-auto max-w-screen-xl px-4">
         <div class="relative shadow-mdg overflow-hidden">
+
             <!-- Heading -->
-            <div class="flex flex-col gap-4 md:flex-row justify-between mt-8 md:mt-8">
-                <!-- Market details  -->
-                <div
-                    class="flex flex-col text-sm p-3 bg-transparent border border-border rounded-sm md:flex-row md:w-1/3 md:gap-4">
-                    <div>
-                        <!-- Total Coins -->
-                        <div>
-                            <p class="font-bold text-brand">10,000</p>
-                            <p class="font-semibold text-[12px]">Total Coins</p>
+            <div class="grid gap-20 mt-8 md:mt-12 lg:grid-cols-3">
+                <!-- Market Updates -->
+                <div>
+                    <!-- Heading -->
+                    <h2 class="mb-2 text-md font-bold tracking-tight text-brand hover:text-brand"><router-link
+                            to="/">Market Update</router-link></h2>
+
+                    <!--  Description -->
+                    <p class="mb-5 font-light text-sm text-pry">Some random texts talking about the Market Upda, it
+                        should be a 2 liner.</p>
+
+                    <!-- Total Coins  -->
+                    <div class="flex justify-between items-center mb-1 hover:bg-gray-50">
+
+                        <div class="flex items-center space-x-2 py-2">
+                            <span class="font-medium text-pry text-sm ">
+                                Total Coins
+                            </span>
                         </div>
 
-                        <!-- Total Market Cap -->
-                        <div class="mt-3">
-                            <p class="font-bold text-brand">5 Million</p>
-                            <p class="font-semibold text-[12px] ">Total Market Cap</p>
-                        </div>
-
-                        <!-- 24 hours volume -->
-                        <div class="mt-3">
-                            <p class="font-bold text-brand">70 Million</p>
-                            <p class="font-semibold text-[12px] ">24 Hrs Vol.</p>
-                        </div>
+                        <p class="flex items-center text-pry gap-1 ">
+                            <span class="font-semibold text-sm ">
+                                50,000
+                            </span>
+                        </p>
                     </div>
+
+                    <!-- Total Market Cap  -->
+                    <div class="flex justify-between items-center mb-1 hover:bg-gray-50">
+
+                        <div class="flex items-center space-x-2 py-2">
+                            <span class="font-medium text-pry text-sm ">
+                                Total Market Cap
+                            </span>
+                        </div>
+
+                        <p class="flex items-center text-pry gap-1 ">
+                            <span class="font-semibold text-sm ">
+                                175,000,000
+                            </span>
+                        </p>
+                    </div>
+
+                    <!-- 24 Hrs Vol  -->
+                    <div class="flex justify-between items-center mb-1 hover:bg-gray-50">
+
+                        <div class="flex items-center space-x-2 py-2">
+                            <span class="font-medium text-pry text-sm ">
+                                24 Hrs Vol
+                            </span>
+                        </div>
+
+                        <p class="flex items-center text-pry gap-1 ">
+                            <span class="font-semibold text-sm ">
+                                50,000
+                            </span>
+                        </p>
+                    </div>
+
                 </div>
 
                 <!-- Top Gainers -->
-                <div
-                    class="hidden md:flex flex-col text-sm p-3 bg-transparent border border-border md:flex-row md:w-1/3 md:gap-4">
-                    <div class="flex flex-col w-full"> <!-- Added flex-col and w-full for full width -->
-                        <div class="flex justify-between">
-                            <p class="font-bold ">Top Gainers</p>
-                            <router-link to="/" class="font-semibold text-brand hover:text-pry text-[12px]">View
-                                More</router-link>
-                        </div>
+                <div class="hidden md:block">  
+                    <!-- Heading -->
+                    <h2 class="mb-2 text-md font-bold tracking-tight text-brand"><router-link to="/">Top
+                            Gainers</router-link></h2>
 
-                        <!-- Coins -->
-                        <div class="mt-3">
-                            <div v-for="index in 4" :key="index" class="flex items-center justify-between">
-                                <!-- Added flex to container -->
-                                <!-- Icon & Coin Name -->
-                                <div class="flex gap-1 pt-2 items-center font-semibold">
-                                    <img class="w-4" src="../assets/vue.svg" alt="Icon">
-                                    <p>Bitcoin</p>
-                                </div>
+                    <!--  Description -->
+                    <p class="mb-5 font-light text-sm text-pry">Some random texts talking about the top gainers, it
+                        should be a 2 liner.</p>
 
-                                <!-- Amount & Percentage Change -->
-                                <div class="flex text-[12px] gap-1 pt-2">
-                                    <p class="font-semibold">50,000</p>
-                                    <p class="text-[10px]">12.46%</p>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Coins -->
+                    <div v-for="index in 3" :key="index"
+                        class="flex justify-between items-center mb-1 hover:bg-gray-50">
+                        <router-link to="/" class="flex items-center space-x-2 py-2">
+                            <!-- Crypto Icon -->
+                            <img class="w-5 h-5 rounded-full border border-gray-200" src="../assets/vue.svg"
+                                alt="image avatar" />
+
+                            <!-- Crypto Name -->
+                            <span class="font-medium text-pry text-sm ">
+                                Bitcoin
+                            </span>
+                        </router-link>
+
+                        <!-- Crypto Price -->
+                        <router-link to="/" class="flex items-center text-pry gap-1 ">
+                            <p class="font-medium text-sm ">
+                                50,000
+                            </p>
+
+                            <!-- Percentage change -->
+                            <p class="font-medium text-sm text-[9px]">10.5%</p>
+                        </router-link>
                     </div>
+
+                    <!-- View More -->
+                    <router-link to="/" class="flex items-center justify-end mt-5 text-pry hover:text-brand">
+                        <p class="font-medium text-sm mb-1">
+                            View more
+                        </p>
+
+                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </router-link>
                 </div>
 
-
                 <!-- Top Losers -->
-                <div
-                    class="hidden md:flex flex-col text-sm p-3 bg-transparent border border-border md:flex-row md:w-1/3 md:gap-4">
-                    <div class="flex flex-col w-full"> <!-- Added flex-col and w-full for full width -->
-                        <div class="flex justify-between">
-                            <p class="font-bold ">Top Losers</p>
-                            <router-link to="/" class="font-semibold text-brand hover:text-pry text-[12px]">View
-                                More</router-link>
-                        </div>
+                <div class="hidden md:block">
+                    <!-- Heading -->
+                    <h2 class="mb-2 text-md font-bold tracking-tight text-brand "><router-link to="/">Top
+                            Losers</router-link></h2>
 
-                        <!-- Coins -->
-                        <div class="mt-3">
-                            <div v-for="index in 4" :key="index" class="flex items-center justify-between">
-                                <!-- Added flex to container -->
-                                <!-- Icon & Coin Name -->
-                                <div class="flex gap-1 pt-2 items-center font-semibold">
-                                    <img class="w-4" src="../assets/vue.svg" alt="Icon">
-                                    <p>Bitcoin</p>
-                                </div>
+                    <!--  Description -->
+                    <p class="mb-5 font-light text-sm text-pry">Some random texts talking about the top losers, it
+                        should be a 2 liner.</p>
 
-                                <!-- Amount & Percentage Change -->
-                                <div class="flex text-[12px] gap-1 pt-2">
-                                    <p class="font-semibold">50,000</p>
-                                    <p class="text-[10px]">12.46%</p>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Coins -->
+                    <div v-for="index in 3" :key="index"
+                        class="flex justify-between items-center mb-1 hover:bg-gray-50">
+                        <router-link to="/" class="flex items-center space-x-2 py-2">
+                            <!-- Crypto Icon -->
+                            <img class="w-5 h-5 rounded-full border border-gray-200" src="../assets/vue.svg"
+                                alt="image avatar" />
+
+                            <!-- Crypto Name -->
+                            <span class="font-medium text-pry text-sm ">
+                                Doge Coin
+                            </span>
+                        </router-link>
+
+                        <!-- Crypto Price -->
+                        <router-link to="/" class="flex items-center text-pry gap-1 ">
+                            <p class="font-medium text-sm ">
+                                50,000
+                            </p>
+
+                            <!-- Percentage change -->
+                            <p class="font-medium text-sm text-[9px]">10.5%</p>
+                        </router-link>
                     </div>
+
+                    <!-- View More -->
+                    <router-link to="/" class="flex items-center justify-end mt-5 text-pry hover:text-brand">
+                        <p class="font-medium text-sm mb-1">
+                            View more
+                        </p>
+
+                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </router-link>
                 </div>
             </div>
 
@@ -234,6 +310,111 @@
 
                 </ul>
             </nav>
+
+
+            <!-- Top Gainers & Top Losers -->
+            <div class="grid gap-8 lg:grid-cols-3 mt-8 md:hidden">
+
+                <!-- Top Gainers -->
+                <div>
+                    <!-- Heading -->
+                    <h2 class="mb-2 text-md font-bold tracking-tight text-brand"><router-link to="/">Top
+                            Gainers</router-link></h2>
+
+                    <!--  Description -->
+                    <p class="mb-5 font-light text-sm text-pry">Some random texts talking about the top gainers, it
+                        should be a 2 liner.</p>
+
+                    <!-- Coins -->
+                    <div v-for="index in 3" :key="index"
+                        class="flex justify-between items-center mb-1 hover:bg-gray-50">
+                        <router-link to="/" class="flex items-center space-x-2 py-2">
+                            <!-- Crypto Icon -->
+                            <img class="w-5 h-5 rounded-full border border-gray-200" src="../assets/vue.svg"
+                                alt="image avatar" />
+
+                            <!-- Crypto Name -->
+                            <span class="font-medium text-pry text-sm ">
+                                Bitcoin
+                            </span>
+                        </router-link>
+
+                        <!-- Crypto Price -->
+                        <router-link to="/" class="flex items-center text-pry gap-1 ">
+                            <p class="font-medium text-sm ">
+                                50,000
+                            </p>
+
+                            <!-- Percentage change -->
+                            <p class="font-medium text-sm text-[9px]">10.5%</p>
+                        </router-link>
+                    </div>
+
+                    <!-- View More -->
+                    <router-link to="/" class="flex items-center justify-end mt-5 text-pry hover:text-brand">
+                        <p class="font-medium text-sm mb-1">
+                            View more
+                        </p>
+
+                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </router-link>
+                </div>
+
+                <!-- Top Losers -->
+                <div>
+                    <!-- Heading -->
+                    <h2 class="mb-2 text-md font-bold tracking-tight text-brand "><router-link to="/">Best
+                            Losers</router-link></h2>
+
+                    <!--  Description -->
+                    <p class="mb-5 font-light text-sm text-pry">Some random texts talking about the top losers, it
+                        should be a 2 liner.</p>
+
+                    <!-- Coins -->
+                    <div v-for="index in 3" :key="index"
+                        class="flex justify-between items-center mb-1 hover:bg-gray-50">
+                        <router-link to="/" class="flex items-center space-x-2 py-2">
+                            <!-- Crypto Icon -->
+                            <img class="w-5 h-5 rounded-full border border-gray-200" src="../assets/vue.svg"
+                                alt="image avatar" />
+
+                            <!-- Crypto Name -->
+                            <span class="font-medium text-pry text-sm ">
+                                Doge Coin
+                            </span>
+                        </router-link>
+
+                        <!-- Crypto Price -->
+                        <router-link to="/" class="flex items-center text-pry gap-1 ">
+                            <p class="font-medium text-sm ">
+                                50,000
+                            </p>
+
+                            <!-- Percentage change -->
+                            <p class="font-medium text-sm text-[9px]">10.5%</p>
+                        </router-link>
+                    </div>
+
+                    <!-- View More -->
+                    <router-link to="/" class="flex items-center justify-end mt-5 text-pry hover:text-brand">
+                        <p class="font-medium text-sm mb-1">
+                            View more
+                        </p>
+
+                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </router-link>
+                </div>
+            </div>
         </div>
     </div>
 </template>

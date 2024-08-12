@@ -1,7 +1,7 @@
 <template>
     <div>
         <div
-            class="tabs-container flex overflow-x-auto whitespace-nowrap gap-4 text-sm font-medium text-center text-sec mt-8 md:mt-12">
+            class="tabs-container flex overflow-x-auto whitespace-nowrap gap-4 text-sm font-medium text-center text-sec mt-12 md:mt-16">
             <!-- Tabs -->
             <router-link to="/"
                 class=" text-pry text-[12px] font-semibold px-2.5 py-2 rounded-sm hover:bg-brand hover:text-sec"
